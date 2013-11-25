@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.add_dependency 'charlock_holmes',    '~> 0.6.6'
-  s.add_dependency 'escape_utils',       '~> 0.3.1'
+  s.add_dependency 'escape_utils',       '~> 0.2.4'
   s.add_dependency 'mime-types',         '~> 1.19'
   s.add_dependency 'gitlab-pygments.rb', '~> 0.5.4'
   s.add_development_dependency 'mocha'
