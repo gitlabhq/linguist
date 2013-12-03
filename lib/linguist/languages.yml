@@ -26,6 +26,7 @@
 
 ABAP:
   type: programming
+  ace_mode: abap
   lexer: ABAP
   primary_extension: .abap
 
@@ -48,6 +49,7 @@ ASP:
 
 ActionScript:
   type: programming
+  ace_mode: actionscript
   lexer: ActionScript 3
   color: "#e3491a"
   search_term: as3
@@ -57,6 +59,7 @@ ActionScript:
 
 Ada:
   type: programming
+  ace_mode: ada
   color: "#02f88c"
   primary_extension: .adb
   extensions:
@@ -103,6 +106,7 @@ AsciiDoc:
 
 Assembly:
   type: programming
+  ace_mode: assembly_x86
   lexer: NASM
   color: "#a67219"
   search_term: nasm
@@ -116,6 +120,7 @@ Augeas:
 
 AutoHotkey:
   type: programming
+  ace_mode: autohotkey
   lexer: autohotkey
   color: "#6594b9"
   aliases:
@@ -133,6 +138,7 @@ Awk:
 
 Batchfile:
   type: programming
+  ace_mode: batchfile
   group: Shell
   search_term: bat
   aliases:
@@ -149,6 +155,7 @@ BlitzMax:
 
 Boo:
   type: programming
+  ace_mode: python
   color: "#d4bec1"
   primary_extension: .boo
 
@@ -163,6 +170,7 @@ Bro:
 
 C:
   type: programming
+  ace_mode: c_cpp
   color: "#555"
   primary_extension: .c
   extensions:
@@ -224,6 +232,7 @@ CMake:
 
 COBOL:
   type: programming
+  ace_mode: cobol
   primary_extension: .cob
   extensions:
   - .cbl
@@ -286,6 +295,7 @@ ColdFusion:
 Common Lisp:
   type: programming
   color: "#3fb68b"
+  ace_mode: lisp
   aliases:
   - lisp
   primary_extension: .lisp
@@ -319,6 +329,7 @@ Cucumber:
 
 Cython:
   type: programming
+  ace_mode: python
   group: Python
   primary_extension: .pyx
   extensions:
@@ -327,6 +338,7 @@ Cython:
 
 D:
   type: programming
+  ace_mode: d
   color: "#fcd46d"
   primary_extension: .d
   extensions:
@@ -339,6 +351,7 @@ D-ObjDump:
 
 DOT:
   type: programming
+  ace_mode: dot
   lexer: Text only
   primary_extension: .dot
   extensions:
@@ -354,6 +367,7 @@ Darcs Patch:
 
 Dart:
   type: programming
+  ace_mode: dart
   primary_extension: .dart
 
 DCPU-16 ASM:
@@ -367,6 +381,7 @@ DCPU-16 ASM:
 
 Diff:
   primary_extension: .diff
+  ace_mode: diff
 
 Dylan:
   type: programming
@@ -408,6 +423,7 @@ Elm:
 
 Emacs Lisp:
   type: programming
+  ace_mode: lisp
   lexer: Scheme
   color: "#c065db"
   aliases:
@@ -419,6 +435,7 @@ Emacs Lisp:
 
 Erlang:
   type: programming
+  ace_mode: erlang
   color: "#0faf8d"
   primary_extension: .erl
   extensions:
@@ -482,6 +499,7 @@ Fantom:
 
 Forth:
   type: programming
+  ace_mode: forth
   primary_extension: .fth
   color: "#341708"
   lexer: Text only
@@ -497,6 +515,7 @@ GAS:
 
 GLSL:
   group: C
+  ace_mode: glsl
   type: programming
   primary_extension: .glsl
   extensions:
@@ -531,6 +550,7 @@ Gettext Catalog:
 
 Go:
   type: programming
+  ace_mode: golang
   color: "#a89b4d"
   primary_extension: .go
 
@@ -584,6 +604,7 @@ HTML+Django:
 
 HTML+ERB:
   type: markup
+  ace_mode: html_ruby
   group: HTML
   lexer: RHTML
   aliases:
@@ -605,6 +626,7 @@ HTTP:
 
 Haml:
   group: HTML
+  ace_mode: haml
   type: markup
   primary_extension: .haml
   extensions:
@@ -613,11 +635,13 @@ Haml:
 
 Handlebars:
   type: markup
+  ace_mode: handlebars
   lexer: Text only
   primary_extension: .handlebars
 
 Haskell:
   type: programming
+  ace_mode: haskell
   color: "#29b544"
   primary_extension: .hs
   extensions:
@@ -633,6 +657,7 @@ Haxe:
 
 INI:
   type: data
+  ace_mode: ini
   extensions:
   - .ini
   - .prefs
@@ -678,6 +703,7 @@ Java:
 
 Java Server Pages:
   group: Java
+  ace_mode: jsp
   lexer: Java Server Page
   search_term: jsp
   aliases:
@@ -708,6 +734,7 @@ JavaScript:
 
 Julia:
   type: programming
+  ace_mode: julia
   primary_extension: .jl
 
 Kotlin:
@@ -736,6 +763,7 @@ Lasso:
 
 Less:
   type: markup
+  ace_mode: less
   group: CSS
   lexer: CSS
   ace_mode: less
@@ -768,7 +796,7 @@ Literate Haskell:
 
 LiveScript:
   type: programming
-  ace_mode: ls
+  ace_mode: livescript
   color: "#499886"
   aliases:
   - ls
@@ -811,6 +839,7 @@ M:
   - .m
 
 Makefile:
+  ace_mode: makefile
   aliases:
   - make
   extensions:
@@ -841,6 +870,7 @@ Markdown:
 
 Matlab:
   type: programming
+  ace_mode: matlab
   color: "#bb92ac"
   primary_extension: .matlab
 
@@ -926,6 +956,7 @@ Nu:
 
 NumPy:
   group: Python
+  ace_mode: python
   primary_extension: .numpy
   extensions:
   - .numpyw
@@ -949,6 +980,7 @@ ObjDump:
 
 Objective-C:
   type: programming
+  ace_mode: objectivec
   color: "#438eff"
   aliases:
   - obj-c
@@ -978,6 +1010,7 @@ Opa:
 
 OpenCL:
   type: programming
+  ace_mode: c_cpp
   group: C
   lexer: C
   primary_extension: .cl
@@ -1037,6 +1070,7 @@ Parrot Assembly:
 
 Pascal:
   type: programming
+  ace_mode: pascal
   lexer: Delphi
   color: "#b0ce4e"
   primary_extension: .pas
@@ -1088,6 +1122,7 @@ Processing:
 
 Prolog:
   type: programming
+  ace_mode: prolog
   color: "#74283c"
   primary_extension: .prolog
   extensions:
@@ -1131,6 +1166,7 @@ Python traceback:
 
 R:
   type: programming
+  ace_mode: r
   color: "#198ce7"
   lexer: S
   primary_extension: .r
@@ -1146,6 +1182,7 @@ RDoc:
 
 RHTML:
   type: markup
+  ace_mode: rhtml
   group: HTML
   primary_extension: .rhtml
 
@@ -1222,6 +1259,7 @@ Ruby:
 
 Rust:
   type: programming
+  ace_mode: rust
   color: "#dea584"
   primary_extension: .rs
 
@@ -1256,6 +1294,7 @@ Scala:
 
 Scheme:
   type: programming
+  ace_mode: scheme
   color: "#1e4aec"
   primary_extension: .scm
   extensions:
@@ -1274,6 +1313,7 @@ Self:
 
 Shell:
   type: programming
+  ace_mode: sh
   lexer: Bash
   search_term: bash
   color: "#5861ce"
@@ -1329,6 +1369,7 @@ TXL:
 
 Tcl:
   type: programming
+  ace_mode: tcl
   color: "#e4cc98"
   primary_extension: .tcl
 
@@ -1374,12 +1415,14 @@ Turing:
 
 Twig:
   type: markup
+  ace_mode: twig
   group: PHP
   lexer: HTML+Django/Jinja
   primary_extension: .twig
 
 TypeScript:
   type: programming
+  ace_mode: typescript
   color: "#31859c"
   aliases:
   - ts
@@ -1395,6 +1438,7 @@ Unified Parallel C:
 
 VHDL:
   type: programming
+  ace_mode: vhdl
   lexer: vhdl
   color: "#543978"
   primary_extension: .vhdl
@@ -1408,6 +1452,7 @@ Vala:
 
 Verilog:
   type: programming
+  ace_mode: verilog
   lexer: verilog
   color: "#848bf3"
   primary_extension: .v
@@ -1458,6 +1503,7 @@ XML:
   - wsdl
   primary_extension: .xml
   extensions:
+  - .atom
   - .axml
   - .ccxml
   - .dita
@@ -1506,6 +1552,7 @@ XProc:
 
 XQuery:
   type: programming
+  ace_mode: xquery
   color: "#2700e2"
   primary_extension: .xquery
   extensions:
@@ -1530,6 +1577,7 @@ Xtend:
 
 YAML:
   type: data
+  ace_mode: yaml
   aliases:
   - yml
   primary_extension: .yml
