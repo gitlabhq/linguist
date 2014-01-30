@@ -1,5 +1,4 @@
 require 'escape_utils'
-require 'pygments'
 require 'yaml'
 
 require 'linguist/classifier'
@@ -235,10 +234,6 @@ module Linguist
       # Set aliases
       @aliases = [default_alias_name] + (attributes[:aliases] || [])
 
-      # Lookup Lexer object
-      @lexer = Pygments::Lexer.find_by_name(attributes[:lexer] || name) ||
-        raise(ArgumentError, "#{@name} is missing lexer")
-
       @ace_mode = attributes[:ace_mode]
       @wrap = attributes[:wrap] || false
 
@@ -426,7 +421,7 @@ module Linguist
     #
     # Returns html String
     def colorize(text, options = {})
-      lexer.highlight(text, options = {})
+      text
     end
 
     # Public: Return name as String representation

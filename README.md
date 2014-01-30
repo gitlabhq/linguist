@@ -23,12 +23,6 @@ Linguist::FileBlob.new("bin/linguist").language.name #=> "Ruby"
 
 See [lib/linguist/language.rb](https://github.com/github/linguist/blob/master/lib/linguist/language.rb) and [lib/linguist/languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
 
-### Syntax Highlighting
-
-The actual syntax highlighting is handled by our Pygments wrapper, [pygments.rb](https://github.com/tmm1/pygments.rb). It also provides a [Lexer abstraction](https://github.com/tmm1/pygments.rb/blob/master/lib/pygments/lexer.rb) that determines which highlighter should be used on a file.
-
-We typically run on a pre-release version of Pygments, [pygments.rb](https://github.com/tmm1/pygments.rb), to get early access to new lexers. The [languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) file is a dump of the lexers we have available on our server.
-
 ### Stats
 
 The Language Graph you see on every repository is built by aggregating the languages of all repo's blobs. The top language in the graph determines the project's primary language. Collectively, these stats make up the [Top Languages](https://github.com/languages) page.
