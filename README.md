@@ -1,16 +1,16 @@
-# Linguist
+# GitLab Linguist [![build status](https://ci.gitlab.org/projects/28/status.png?ref=master)](https://ci.gitlab.org/projects/28?ref=master)
 
-We use this library at GitHub to detect blob languages, highlight code, ignore binary files, suppress generated files in diffs and generate language breakdown graphs.
+We use this library to detect blob languages, ignore binary files, suppress generated files in diffs and generate language breakdown graphs.
 
 ## Features
 
 ### Language detection
 
-Linguist defines the list of all languages known to GitHub in a [yaml file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml). In order for a file to be highlighted, a language and lexer must be defined there.
+Linguist defines the list of all languages known to GitHub in a [yaml file](https://gitlab.com/gitlab-org/linguist/blob/master/lib/linguist/languages.yml). In order for a file to be highlighted, a language and lexer must be defined there.
 
 Most languages are detected by their file extension. This is the fastest and most common situation.
 
-For disambiguating between files with common extensions, we use a [Bayesian classifier](https://github.com/github/linguist/blob/master/lib/linguist/classifier.rb). For an example, this helps us tell the difference between `.h` files which could be either C, C++, or Obj-C.
+For disambiguating between files with common extensions, we use a [Bayesian classifier](https://gitlab.com/gitlab-org/linguist/blob/master/lib/linguist/classifier.rb). For an example, this helps us tell the difference between `.h` files which could be either C, C++, or Obj-C.
 
 In the actual GitHub app we deal with `Grit::Blob` objects. For testing, there is a simple `FileBlob` API.
 
@@ -21,7 +21,7 @@ Linguist::FileBlob.new("lib/linguist.rb").language.name #=> "Ruby"
 Linguist::FileBlob.new("bin/linguist").language.name #=> "Ruby"
 ```
 
-See [lib/linguist/language.rb](https://github.com/github/linguist/blob/master/lib/linguist/language.rb) and [lib/linguist/languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
+See [lib/linguist/language.rb](https://gitlab.com/gitlab-org/linguist/blob/master/lib/linguist/language.rb) and [lib/linguist/languages.yml](https://gitlab.com/gitlab-org/linguist/blob/master/lib/linguist/languages.yml).
 
 ### Stats
 
@@ -48,7 +48,7 @@ Checking other code into your git repo is a common practice. But this often infl
 Linguist::FileBlob.new("vendor/plugins/foo.rb").vendored? # => true
 ```
 
-See [Linguist::BlobHelper#vendored?](https://github.com/github/linguist/blob/master/lib/linguist/blob_helper.rb) and [lib/linguist/vendor.yml](https://github.com/github/linguist/blob/master/lib/linguist/vendor.yml).
+See [Linguist::BlobHelper#vendored?](https://gitlab.com/gitlab-org/linguist/blob/master/lib/linguist/blob_helper.rb) and [lib/linguist/vendor.yml](https://gitlab.com/gitlab-org/linguist/blob/master/lib/linguist/vendor.yml).
 
 #### Generated file detection
 
@@ -58,7 +58,7 @@ Not all plain text files are true source files. Generated files like minified js
 Linguist::FileBlob.new("underscore.min.js").generated? # => true
 ```
 
-See [Linguist::Generated#generated?](https://github.com/github/linguist/blob/master/lib/linguist/generated.rb).
+See [Linguist::Generated#generated?](https://gitlab.com/gitlab-org/linguist/blob/master/lib/linguist/generated.rb).
 
 ## Installation
 
@@ -66,24 +66,10 @@ github.com is usually running the latest version of the `github-linguist` gem th
 
 But for development you are going to want to checkout out the source. To get it, clone the repo and run [Bundler](http://gembundler.com/) to install its dependencies.
 
-    git clone https://github.com/github/linguist.git
+    git clone https://gitlab.com/gitlab-org/linguist.git
     cd linguist/
     bundle install
 
 To run the tests:
 
     bundle exec rake test
-
-## Contributing
-
-The majority of patches won't need to touch any Ruby code at all. The [master language list](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) is just a configuration file.
-
-We try to only add languages once they have some usage on GitHub, so please note in-the-wild usage examples in your pull request.
-
-Almost all bug fixes or new language additions should come with some additional code samples. Just drop them under [`samples/`](https://github.com/github/linguist/tree/master/samples) in the correct subdirectory and our test suite will automatically test them. In most cases you shouldn't need to add any new assertions.
-
-### Testing
-
-Sometimes getting the tests running can be too much work, especially if you don't have much Ruby experience. It's okay, be lazy and let our build bot [Travis](http://travis-ci.org/#!/github/linguist) run the tests for you. Just open a pull request and the bot will start cranking away.
-
-Here's our current build status, which is hopefully green: [![Build Status](https://secure.travis-ci.org/github/linguist.png?branch=master)](http://travis-ci.org/github/linguist)
